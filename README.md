@@ -68,7 +68,7 @@ src/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone
+git clone https://github.com/IgnacioRoveres/food-store
 cd food-store
 ```
 
