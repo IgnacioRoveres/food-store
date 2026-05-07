@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store - Carrito</title>
+    <link rel="stylesheet" href="./cart.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🍕 Food Store</h1>
+      <a href="../home/home.html" class="btn-volver">← Volver al catálogo</a>
+    </header>
+
+    <main>
+      <h2>🛒 Mi Carrito</h2>
+
+      <div id="lista-carrito"></div>
+
+      <p id="carrito-vacio" class="oculto">
+        Tu carrito está vacío 😕
+        <a href="../home/home.html">Ir al catálogo</a>
+      </p>
+
+      <div id="seccion-total" class="oculto">
+        <div class="total">
+          <span>Total:</span>
+          <span id="total-precio">$0</span>
+        </div>
+        <div class="acciones">
+          <button id="btn-vaciar">🗑️ Vaciar carrito</button>
+          <button id="btn-finalizar">✅ Finalizar compra</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal de compra finalizada -->
+    <div id="modal-overlay" class="oculto">
+      <div class="modal">
+        <h2>🎉 ¡Compra realizada!</h2>
+        <p>Tu pedido fue registrado con éxito.</p>
+        <p id="modal-total"></p>
+        <button id="btn-modal-cerrar">Volver al catálogo</button>
+      </div>
+    </div>
+
+    <script type="module" src="./cart.ts"></script>
+  </body>
+</html>

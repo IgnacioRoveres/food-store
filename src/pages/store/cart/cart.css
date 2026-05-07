@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e63946;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.btn-volver {
+  background: white;
+  color: #e63946;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Items */
+.item-carrito {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.item-carrito img {
+  width: 100px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.item-categoria {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.item-precio {
+  color: #555;
+}
+
+.item-subtotal {
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* Controles cantidad */
+.item-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item-cantidad span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+
+.btn-aumentar,
+.btn-disminuir {
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-aumentar:hover,
+.btn-disminuir:hover {
+  background: #c1121f;
+}
+
+.btn-eliminar {
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.btn-eliminar:hover {
+  background: #111;
+}
+
+/* Total */
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Acciones */
+.acciones {
+  display: flex;
+  gap: 1rem;
+}
+
+#btn-vaciar {
+  flex: 1;
+  padding: 0.8rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#btn-vaciar:hover {
+  background: #111;
+}
+
+#btn-finalizar {
+  flex: 1;
+  padding: 0.8rem;
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#btn-finalizar:hover {
+  background: #21867a;
+}
+
+/* Mensajes */
+.oculto {
+  display: none;
+}
+
+#carrito-vacio {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: #888;
+}
+
+#carrito-vacio a {
+  display: block;
+  margin-top: 1rem;
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#modal-overlay.oculto {
+  display: none;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  color: #2a9d8f;
+}
+
+.modal p {
+  color: #555;
+  font-size: 1rem;
+}
+
+#btn-modal-cerrar {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#btn-modal-cerrar:hover {
+  background: #c1121f;
+}

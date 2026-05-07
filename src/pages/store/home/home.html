@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store - Catálogo</title>
+    <link rel="stylesheet" href="./home.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🍕 Food Store</h1>
+      <a href="../cart/cart.html" class="btn-carrito">
+        🛒 Ver carrito (<span id="carrito-count">0</span>)
+      </a>
+    </header>
+
+    <main>
+      <!-- Barra de búsqueda -->
+      <div class="buscador">
+        <input
+          type="text"
+          id="input-busqueda"
+          placeholder="Buscar producto..."
+        />
+      </div>
+
+      <div class="contenido">
+        <!-- Menú lateral de categorías -->
+        <aside class="categorias">
+          <h2>Categorías</h2>
+          <ul id="lista-categorias">
+            <!-- Se renderizan dinámicamente -->
+          </ul>
+        </aside>
+
+        <!-- Grilla de productos -->
+        <section class="productos">
+          <div id="grilla-productos">
+            <!-- Se renderizan dinámicamente -->
+          </div>
+          <p id="sin-resultados" class="oculto">
+            No se encontraron productos 😕
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <!-- Toast de confirmación -->
+    <div id="toast" class="toast">✅ Producto agregado al carrito</div>
+
+    <script type="module" src="./home.ts"></script>
+  </body>
+</html>

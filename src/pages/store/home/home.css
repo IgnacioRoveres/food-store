@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e63946;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.btn-carrito {
+  background: white;
+  color: #e63946;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buscador */
+.buscador {
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Layout principal */
+.contenido {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+/* Sidebar categorías */
+.categorias {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.categorias h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.categorias ul {
+  list-style: none;
+}
+
+.categoria-item {
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.categoria-item:hover {
+  background: #f0f0f0;
+}
+
+.categoria-item.activa {
+  background: #e63946;
+  color: white;
+  font-weight: bold;
+}
+
+/* Grilla productos */
+.productos {
+  flex: 1;
+}
+
+#grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.card-producto {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-producto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.categoria-badge {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.precio {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.btn-agregar {
+  margin-top: auto;
+  padding: 0.5rem;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-agregar:hover {
+  background: #c1121f;
+}
+
+/* Mensajes */
+.oculto {
+  display: none;
+}
+
+#sin-resultados {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #888;
+}
+
+/* Toast con animación */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #2a9d8f;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
